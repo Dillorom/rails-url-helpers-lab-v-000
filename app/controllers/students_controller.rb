@@ -10,6 +10,7 @@ class StudentsController < ApplicationController
   end
 
   def activate
+    binding.pry
     @student = Student.find(params[:id])
     @student.active = !@student.active
     @student.save
